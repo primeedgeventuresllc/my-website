@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PrimeEdge Partners</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prime Edge Partners</title>
   <link rel="stylesheet" href="styles.css" />
-  <script>
-    function fakeLogin(e){
-      e.preventDefault();
-      const u=document.getElementById('username').value.trim();
-      const p=document.getElementById('password').value.trim();
-      if(!u||!p){ alert("Please enter both username and password."); return; }
-      const btn=document.getElementById('signin'); btn.disabled=true; btn.innerText="Signing in…";
-      setTimeout(()=>{ window.location.href="under-construction.html?user="+encodeURIComponent(u); }, 1200);
-    }
-  </script>
 </head>
 <body>
   <header class="header">
     <div class="container nav">
-      <a class="logo" href="index.html">PrimeEdge Partners</a>
+      <a class="logo" href="index.html">Prime Edge Partners</a>
       <nav class="links">
-        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="under-construction.html">More</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <div class="card" style="max-width:480px; margin:40px auto 0;">
-      <h1 style="margin-top:0">Welcome</h1>
-      <p style="color:var(--muted)">This is a simple placeholder sign-in.</p>
-      <form onsubmit="fakeLogin(event)">
-        <label for="username">Username</label>
-        <input id="username" class="input" type="text" autocomplete="username" />
-        <label for="password">Password</label>
-        <input id="password" class="input" type="password" autocomplete="current-password" />
-        <button id="signin" class="button" type="submit">Sign In</button>
-      </form>
+    <section class="hero">
+      <h1>Welcome to Prime Edge Partners</h1>
+      <p>Your trusted partner in driving strategic growth and innovation.</p>
+    </section>
 
-      <p style="margin-top:16px">
-        or <a href="under-construction.html">see the under-construction page</a>
+    <section class="content">
+      <h2>What We Do</h2>
+      <p>
+        At Prime Edge Partners, we collaborate with businesses and organizations
+        to unlock potential, streamline operations, and deliver measurable results.
       </p>
-    </div>
+      <a class="button" href="under-construction.html">Learn More</a>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="y"></span> PrimeEdge Partners</div>
+    <div class="container">
+      © <span id="year"></span> Prime Edge Partners
+    </div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
