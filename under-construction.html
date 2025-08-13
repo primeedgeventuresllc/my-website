@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Page Under Construction</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Under Construction · PrimeEdge Partners</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function nameFromQuery(){
+      const m=location.search.match(/[?&]user=([^&]+)/);
+      return m ? decodeURIComponent(m[1]) : "";
+    }
+    window.addEventListener('DOMContentLoaded', ()=>{
+      const n=nameFromQuery();
+      if(n){ document.getElementById('hello').textContent = `Hi ${n},`; }
+    });
+  </script>
 </head>
 <body>
-  <h1>This page is under construction 🚧</h1>
-  <p>Thanks for visiting. More coming soon!</p>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html">PrimeEdge Partners</a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card" style="max-width:680px; margin:40px auto 0;">
+      <h1 style="color:var(--warning); margin-top:0">🚧 Page Under Construction</h1>
+      <p id="hello" style="color:var(--muted)"></p>
+      <p>We’re building this section. Check back soon.</p>
+      <a class="button" href="index.html">Back to Home</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> PrimeEdge Partners</div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
