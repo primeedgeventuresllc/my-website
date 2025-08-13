@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact · PrimeEdge Partners</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html">PrimeEdge Partners</a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a aria-current="page" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card" style="max-width:560px; margin:40px auto 0;">
+      <h1 style="margin-top:0">Contact</h1>
+      <p style="color:var(--muted)">This form is static for now. Later we can hook it to Formspree, Netlify Forms, or a backend.</p>
+      <form>
+        <label>Name</label>
+        <input class="input" type="text" placeholder="Your name" />
+        <label>Email</label>
+        <input class="input" type="email" placeholder="you@example.com" />
+        <label>Message</label>
+        <textarea class="input" rows="5" placeholder="How can we help?"></textarea>
+        <button class="button" type="button" onclick="alert('This is a demo. We can wire this up later!')">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> PrimeEdge Partners</div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
