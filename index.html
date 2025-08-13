@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PrimeEdge Partners</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -16,25 +16,24 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="signin.html">Sign In</a>
       </nav>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main class="container">
     <section class="hero">
       <h1>Welcome to PrimeEdge Partners</h1>
       <p>Your trusted partner in delivering innovative solutions and business growth strategies.</p>
-      <a href="contact.html" class="btn">Get in Touch</a>
+      <a class="btn" href="contact.html">Get in Touch</a>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 PrimeEdge Partners</p>
-    </div>
+    <div class="container">&copy; <span id="y"></span> PrimeEdge Partners</div>
   </footer>
-
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
