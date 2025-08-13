@@ -1,57 +1,84 @@
-:root{
-  --bg:#ffffff;         /* white */
-  --brand:#002855;      /* navy */
-  --muted:#4b5563;      /* gray */
+:root {
+  --navy: #001f3f;
+  --white: #ffffff;
+  --muted: #666666;
 }
 
-/* Reset */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--brand)}
-
-/* Layout container */
-.container{max-width:960px;margin:0 auto;padding:0 24px}
-
-/* HEADER */
-.header{background:var(--bg);border-bottom:1px solid rgba(0,0,0,.1)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-
-/* Logo */
-.logo{font-weight:800;font-size:1.6rem;color:var(--brand);text-decoration:none}
-
-/* Nav links */
-.nav .links{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
-.nav .links a{
-  margin:0;
-  padding:8px 10px;
-  border-radius:10px;
-  color:var(--brand);
-  font-weight:700;
-  text-decoration:none;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
 }
-.nav .links a:hover{background:rgba(0,0,0,.05)}
-.nav .links a[aria-current="page"]{text-decoration:underline}
 
-/* Hero / sections */
-.hero{text-align:center;padding:60px 20px}
-.hero h1{font-size:2.5rem;margin:0 0 12px}
-.hero p{color:var(--muted);margin:0 0 24px}
+.header {
+  background: var(--white);
+  border-bottom: 2px solid var(--navy);
+}
 
-/* Buttons */
-.btn{display:inline-block;padding:10px 20px;border-radius:8px;background:var(--brand);color:#fff;text-decoration:none}
-.btn:hover{background:#001f40}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-/* Footer */
-.footer{border-top:1px solid rgba(0,0,0,.1);text-align:center;padding:20px 0;margin-top:40px;color:var(--brand)}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
 
-/* Mobile tweaks */
-@media (max-width:640px){
-  .container{padding:0 12px}
-  .nav{flex-wrap:wrap}
-  .nav .links{
-    width:100%;
-    justify-content:center;
-    gap:16px;
-    padding:6px 0 10px;
-  }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.links a {
+  margin-left: 1rem;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  padding: 2rem 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background: #003366;
+}
+
+.footer {
+  background: var(--white);
+  border-top: 2px solid var(--navy);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--navy);
 }
