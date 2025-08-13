@@ -82,4 +82,10 @@ body {
   font-size: 0.9rem;
   color: var(--navy);
 }
-
+/* Make nav links evenly spaced and wrap nicely on mobile */
+.nav .links{
+  display:flex;
+  gap:14px;           /* <— spacing between items */
+  align-items:center;
+  flex-wrap:wrap;     /* allows wrapping on small screens */
+}
